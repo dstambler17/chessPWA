@@ -1,0 +1,51 @@
+{
+    "name": "Chess Correspondence Trackers",
+    "short_name": "ChessTrackers",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ee6e73",
+    "theme_color": "#ee6e73",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/icon/chessicon72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+          "src": "/img/icon/chessicon96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+            "src": "/img/icon/chessicon128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/img/icon/chessicon144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/img/icon/chessicon152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/img/icon/chessicon192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/icon/chessicon384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/img/icon/chessicon512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+  }

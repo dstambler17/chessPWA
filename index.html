@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Correspondence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="icon" type="image/png" href="img/icon/chessicon96x96.png"/>
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/img/icon/chessicon96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">ChessTrackers</a>
+          <a href="#" data-target="side-left" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="about.html">About</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav side-menu" id="side-left">
+        <li><a href="about.html">About</a></li>
+        <li><a href="instructions.html">Instructions</a></li>
+      </ul>
+
+      <!--Mobile Add form-->
+      <ul class="sidenav side-form" id="mobile-add-form">
+        <form id="mobile-form" class="add-game container section">
+          <h6 >Add Game</h6>
+          <div class="divider"></div>
+
+          <div class="input-field col s12">
+            <select id="color" class="mobile-select">
+              <option value="white"selected>White</option>
+              <option value="black">Black</option>
+            </select>
+            <label>Player Color</label>
+          </div>
+          
+          <div class="input-field">
+            <input placeholder="Optional" id="opponentlevel" type="text" class="validate">
+            <label for="opponentlevel">Opponent Level</label>
+          </div>
+          <div class="input-field center">
+            <button class="btn-small">Add</button>
+          </div>
+        </form>
+      </ul>
+
+      <div class="games container grey-text text-darken-1">
+      </div>
+
+        <!-- Modal Structure -->
+        <div id="form-modal" class="modal">
+          <div class="modal-content">
+            <form id="widescreen-form" class="add-game container section">
+              <h6 >New Game</h6>
+              <div class="divider"></div>
+              
+              <div class="input-field col s12">
+                <select id="color" class="window-select">
+                  <option value="white"selected>White</option>
+                  <option value="black">Black</option>
+                </select>
+                <label>Player Color</label>
+              </div>
+
+              <div class="input-field">
+                <input placeholder="Optional" id="opponentlevel" type="text" class="validate">
+                <label for="opponentlevel">Opponent Level</label>
+              </div>
+              <div class="input-field center">
+                <button class="btn-small">Add</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+
+        <div class="center" id="is-large-screen-button">
+            <a class="btn-floating btn-small btn-large add-btn modal-trigger" href="#form-modal">
+              <i class="material-icons">add</i>
+            </a>
+        </div>
+
+        <div class="center" id="is-mobile-button">
+            <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="mobile-add-form">
+              <i class="material-icons">add</i>
+            </a>
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDOPGI5aLrobkx0eQD8Xw6wjGYTFLegnDo",
+    authDomain: "chesspwa.firebaseapp.com",
+    databaseURL: "https://chesspwa.firebaseio.com",
+    projectId: "chesspwa",
+    storageBucket: "chesspwa.appspot.com",
+    messagingSenderId: "364551970572",
+    appId: "1:364551970572:web:0f98c71ad904e027f3f329",
+    measurementId: "G-8KE2WHS8H2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const db = firebase.firestore();
+</script>
+
+<script src="js/app.js"></script>
+<script src="js/databaseInteract.js"></script>
+<script src="js/ui.js"></script>
+      
+</body>
+</html>
