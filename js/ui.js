@@ -31,11 +31,11 @@ const games = document.querySelector('.games');
 const renderGame = (data, id) => {
 
   const html = `
-    <div class="card-panel game white row" id="${id}">
-      <img src="/img/${data.color}.jpg" alt="game piece">
-      <div class="game-details">
-        <div class="game-player-color">${data.color}</div>
-        <div class="game-opponent-level">${data.opponent_level}</div>
+    <div class="card-panel game white row" id="${id}" specialval="link">
+      <img src="/img/${data.color}.jpg" alt="game piece" specialval="link">
+      <div class="game-details" specialval="link">
+        <div class="game-player-color" specialval="link">${data.color}</div>
+        <div class="game-opponent-level" specialval="link">${data.opponent_level}</div>
       </div>
       <div class="game-delete">
         <i class="material-icons" data-id="${id}">delete_outline</i>
@@ -43,11 +43,20 @@ const renderGame = (data, id) => {
     </div>
   `;
   games.innerHTML += html;
-
 };
 
+
+
 document.addEventListener("DOMContentLoaded", function(){
-  changeButtons()
+  const docUrl = document.location.href
+  if (docUrl.indexOf('about.html') === -1 && docUrl.indexOf('instructions.html') === -1 && docUrl.indexOf('gameDetail.html') === -1){
+    changeButtons()
+  }
+  if (docUrl.indexOf("gameDetail") > -1){
+    id = document.location.hash.substr(1)
+    loadDetailView(id)
+  }
+  
 });
 window.addEventListener("resize", changeButtons);
 
@@ -57,5 +66,10 @@ const deleteGame = (id) => {
   const game = document.getElementById(`${id}`);
   game.remove();
 };
+
+
+
+
+
 
 

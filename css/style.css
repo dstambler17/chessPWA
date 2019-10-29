@@ -14,6 +14,11 @@
     position: relative;
 }
 
+.card-panel.game:hover{
+    cursor: pointer;
+}
+
+
 .game img{
     grid-area: image;
     max-width: 60px;

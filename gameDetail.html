@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Details -- Chess Correspondence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="icon" type="image/png" href="img/icon/chessicon96x96.png"/>
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/img/icon/chessicon96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+    <meta name="theme-color" content="#FFE1C4">
+
+</head>
+<body>  
+       
+        <nav>
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo">ChessTrackers</a>
+              <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="about.html">About</a></li>
+                <li><a href="instructions.html">Instructions</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav side-menu" id="mobile-demo">
+            <li><a href="about.html">About</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+          </ul>
+
+          <!-- BODY OF Detail PAGE-->
+          <div class="side-page-content gamedetail">
+            <div><h2 class="side-page-header">Game Details</h2></div>
+          </div>
+
+          <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+
+
+          <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
+
+          <script>
+              // Your web app's Firebase configuration
+              var firebaseConfig = {
+                apiKey: "AIzaSyDOPGI5aLrobkx0eQD8Xw6wjGYTFLegnDo",
+                authDomain: "chesspwa.firebaseapp.com",
+                databaseURL: "https://chesspwa.firebaseio.com",
+                projectId: "chesspwa",
+                storageBucket: "chesspwa.appspot.com",
+                messagingSenderId: "364551970572",
+                appId: "1:364551970572:web:0f98c71ad904e027f3f329",
+                measurementId: "G-8KE2WHS8H2"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              firebase.analytics();
+      
+              const db = firebase.firestore();
+              </script>
+              <script src="js/databaseInteract.js"></script>
+              <script src="js/ui.js"></script>
+    
+    
+</body>
+</html>

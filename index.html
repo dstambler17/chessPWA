@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/form-header.js" type="module"></script>
     <link rel="icon" type="image/png" href="img/icon/chessicon96x96.png"/>
     <link rel="manifest" href="/manifest.json">
     <!-- ios support -->
@@ -38,7 +39,7 @@
       <!--Mobile Add form-->
       <ul class="sidenav side-form" id="mobile-add-form">
         <form id="mobile-form" class="add-game container section">
-          <h6 >Add Game</h6>
+          <form-header></form-header> <!--Custom comp-->
           <div class="divider"></div>
 
           <div class="input-field col s12">
@@ -66,7 +67,7 @@
         <div id="form-modal" class="modal">
           <div class="modal-content">
             <form id="widescreen-form" class="add-game container section">
-              <h6 >New Game</h6>
+              <form-header></form-header> <!--Custom comp-->
               <div class="divider"></div>
               
               <div class="input-field col s12">
@@ -132,6 +133,7 @@
 <script src="js/app.js"></script>
 <script src="js/databaseInteract.js"></script>
 <script src="js/ui.js"></script>
+
       
 </body>
 </html>
